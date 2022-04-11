@@ -11,8 +11,7 @@
         android:theme="@style/Theme.DigiitPlay">
         <activity
             android:name=".ScoreActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:exported="false" />
         <activity
             android:name=".GameActivity"
             android:exported="false" />

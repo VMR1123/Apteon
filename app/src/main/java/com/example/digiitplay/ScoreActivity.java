@@ -28,18 +28,32 @@ public class ScoreActivity extends AppCompatActivity {
         TextView viewCorrect = findViewById(R.id.textView8);
         TextView viewIncorrect = findViewById(R.id.textView10);
         TextView viewAccuracy = findViewById(R.id.textView13);
+        TextView viewScore = findViewById(R.id.score);
 
         String correctCount = i.getStringExtra("correct");
         String incorrectCount = i.getStringExtra("incorrect");
+        String mode = i.getStringExtra("mode");
 
         int correctValue = Integer.valueOf(correctCount);
         int incorrectValue = Integer.valueOf(incorrectCount);
+        int modeValue = Integer.parseInt(mode);
+        int scoreValue;
+
+        if (modeValue == 1)
+            scoreValue = correctValue + (-1 * incorrectValue);
+        else if (modeValue == 2)
+            scoreValue = (2 * correctValue) + (-1 * incorrectValue);
+        else if (modeValue == 3)
+            scoreValue = (4 * correctValue) + (-2 * incorrectValue);
+        else
+            scoreValue = (6 * correctValue) + (-3 * incorrectValue);
 
         double accuracyValue = (Double.valueOf(correctValue) * 100) / Double.valueOf(correctValue + incorrectValue);
 
+        viewScore.setText(String.valueOf(scoreValue) + " Pts");
         viewTotal.setText(String.valueOf(correctValue + incorrectValue));
         viewCorrect.setText(correctCount);
         viewIncorrect.setText(incorrectCount);
-        viewAccuracy.setText(String.format("%.2f", accuracyValue)+"%");
+        viewAccuracy.setText(String.format("%.2f", accuracyValue) + "%");
     }
 }

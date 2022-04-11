@@ -26,8 +26,6 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-
-
         Bundle i = getIntent().getExtras();
         int mode = i.getInt("mode");
 
@@ -46,6 +44,7 @@ public class GameActivity extends AppCompatActivity {
 
                 i2.putExtra("correct", String.valueOf(right));
                 i2.putExtra("incorrect", String.valueOf(wrong));
+                i2.putExtra("mode", String.valueOf(mode));
 
                 startActivity(i2);
             }
