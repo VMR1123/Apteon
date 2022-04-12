@@ -254,27 +254,29 @@ public class GameActivity extends AppCompatActivity {
         }
 
         check.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-                int number1 = Integer.parseInt(num1.getText().toString());
-                int number2 = Integer.parseInt(num2.getText().toString());
-                int number3 = Integer.parseInt(num3.getText().toString());
+                String n1 = String.valueOf(num1.getText());
+                String n2 = String.valueOf(num2.getText());
+                String n3 = String.valueOf(num3.getText());
 
-                String n1 = num1.getText().toString();
-                String n2 = num2.getText().toString();
-                String n3 = num3.getText().toString();
+                try{
+                    int number1 = Integer.parseInt(num1.getText().toString());
+                    int number2 = Integer.parseInt(num2.getText().toString());
+                    int number3 = Integer.parseInt(num3.getText().toString());
 
-                if (num1.getText().toString().equals("") || num2.getText().toString().equals("") || num3.getText().toString().equals("")) {
+                    if (number1 * number2 + number3 != answer) {
+                        Toast.makeText(getApplicationContext(), "Wrong Answer!!!", Toast.LENGTH_SHORT).show();
+                        wrong++;
+                        show(mode);
+                    } else if (number1 * number2 + number3 == answer) {
+                        Toast.makeText(getApplicationContext(), "Correct Answer!!!", Toast.LENGTH_SHORT).show();
+                        right++;
+                        show(mode);
+                    }
+                }
+                catch (NumberFormatException e){
                     Toast.makeText(GameActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
-                    show(mode);
-                } else if (number1 * number2 + number3 != answer) {
-                    Toast.makeText(getApplicationContext(), "Wrong Answer!!!", Toast.LENGTH_SHORT).show();
-                    wrong++;
-                    show(mode);
-                } else if (number1 * number2 + number3 == answer) {
-                    Toast.makeText(getApplicationContext(), "Correct Answer!!!", Toast.LENGTH_SHORT).show();
-                    right++;
                     show(mode);
                 }
             }
