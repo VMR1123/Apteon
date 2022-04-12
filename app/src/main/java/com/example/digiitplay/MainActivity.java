@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button easy = findViewById(R.id.easy);
         Button medium = findViewById(R.id.med);
         Button hard = findViewById(R.id.hard);
-        Button hardplus = findViewById(R.id.hardplus);
+        Button hardPlus = findViewById(R.id.hardplus);
 
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        hardplus.setOnClickListener(new View.OnClickListener() {
+        hardPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int mode = 4;

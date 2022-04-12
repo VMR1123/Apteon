@@ -5,14 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -32,14 +28,14 @@ public class GameActivity extends AppCompatActivity {
         TextView timer = findViewById(R.id.timer);
         TextView textView1 = findViewById(R.id.textView12);
 
-         yourCountDownTimer = new CountDownTimer(46000, 1000) {
+        yourCountDownTimer = new CountDownTimer(46000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 timer.setText(String.valueOf(millisUntilFinished / 1000));
             }
 
             public void onFinish() {
-                textView1.setText("Time Up!!!");
+                textView1.setText(R.string.timeUp);
                 Intent i2 = new Intent(getApplicationContext(), ScoreActivity.class);
 
                 i2.putExtra("correct", String.valueOf(right));
@@ -221,15 +217,11 @@ public class GameActivity extends AppCompatActivity {
 
         Random random = new Random();
 
-        int n1 = 0, n2, n3, max1 = 9, min1 = 2, max2 = 9, min2 = 1, temp1, temp2;
-
+        int n1, n2, n3, max1 = 9, min1 = 2, max2 = 9, min2 = 1;
 
         int answer;
-        int control = 0;
-        temp1 = n1;
-        do {
-            n1 = random.nextInt((max1 - min1) + 1) + min1;
-        } while (n1 == temp1);
+
+        n1 = random.nextInt((max1 - min1) + 1) + min1;
 
         do {
             n2 = random.nextInt((max1 - min1) + 1) + min1;
@@ -256,11 +248,7 @@ public class GameActivity extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String n1 = String.valueOf(num1.getText());
-                String n2 = String.valueOf(num2.getText());
-                String n3 = String.valueOf(num3.getText());
-
-                try{
+                try {
                     int number1 = Integer.parseInt(num1.getText().toString());
                     int number2 = Integer.parseInt(num2.getText().toString());
                     int number3 = Integer.parseInt(num3.getText().toString());
@@ -274,8 +262,7 @@ public class GameActivity extends AppCompatActivity {
                         right++;
                         show(mode);
                     }
-                }
-                catch (NumberFormatException e){
+                } catch (NumberFormatException e) {
                     Toast.makeText(GameActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
                     show(mode);
                 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +15,7 @@
         android:textStyle="italic"
         android:textColor="@color/orange"
         android:textSize="30sp"
-        android:text="DigiPlay" />
+        android:text="@string/digiplay" />
 
     <Button
         android:id="@+id/easy"
@@ -27,7 +26,7 @@
         android:layout_marginTop="125dp"
         android:background="@drawable/rounded_edit_text1"
         android:textColor="@color/white"
-        android:text="Easy" />
+        android:text="@string/easy" />
 
     <Button
         android:id="@+id/med"
@@ -38,7 +37,7 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_edit_text1"
         android:textColor="@color/white"
-        android:text="Moderate" />
+        android:text="@string/moderate" />
 
     <Button
         android:id="@+id/hard"
@@ -48,7 +47,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_edit_text1"
-        android:text="Hard"
+        android:text="@string/hard"
         android:textColor="@color/white" />
 
     <Button
@@ -60,17 +59,17 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_edit_text1"
         android:textColor="@color/white"
-        android:text="Hard +" />
+        android:text="@string/hard_plus" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:alpha=".25"
         android:rotation="150"
-        android:text="4"
+        android:text="@string/_4"
         android:textSize="50sp" />
 
     <TextView
@@ -78,12 +77,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp"
         android:layout_marginTop="20dp"
         android:textSize="30sp"
         android:alpha=".5"
-        android:text="+" />
+        android:text="@string/plusSign" />
 
     <TextView
         android:id="@+id/textView4"
@@ -91,11 +90,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_toLeftOf="@id/easy"
+        android:layout_toStartOf="@id/easy"
         android:layout_marginTop="95dp"
         android:alpha=".4"
         android:rotation="45"
-        android:text="+"
+        android:text="@string/plusSign"
         android:textSize="45sp" />
 
     <TextView
@@ -103,11 +102,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hard"
-        android:layout_marginLeft="40dp"
-        android:layout_toRightOf="@id/hard"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@id/hard"
         android:alpha=".15"
         android:rotation="30"
-        android:text="6"
+        android:text="@string/_6"
         android:textSize="50sp" />
 
     <TextView
@@ -115,10 +114,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hardplus"
-        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
         android:alpha=".15"
         android:rotation="-30"
-        android:text="1"
+        android:text="@string/_1"
         android:textSize="40sp" />
 
     <TextView
@@ -126,12 +125,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hardplus"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
-        android:layout_toRightOf="@id/hardplus"
+        android:layout_toEndOf="@id/hardplus"
         android:alpha=".50"
         android:rotation="-120"
-        android:text="3"
+        android:text="@string/_3"
         android:textSize="35sp" />
 
 </RelativeLayout>

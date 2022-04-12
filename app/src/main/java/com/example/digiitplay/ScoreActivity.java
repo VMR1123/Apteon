@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
@@ -34,8 +33,8 @@ public class ScoreActivity extends AppCompatActivity {
         String incorrectCount = i.getStringExtra("incorrect");
         String mode = i.getStringExtra("mode");
 
-        int correctValue = Integer.valueOf(correctCount);
-        int incorrectValue = Integer.valueOf(incorrectCount);
+        int correctValue = Integer.parseInt(correctCount);
+        int incorrectValue = Integer.parseInt(incorrectCount);
         int modeValue = Integer.parseInt(mode);
         int scoreValue;
 
@@ -48,9 +47,9 @@ public class ScoreActivity extends AppCompatActivity {
         else
             scoreValue = (6 * correctValue) + (-3 * incorrectValue);
 
-        double accuracyValue = (Double.valueOf(correctValue) * 100) / Double.valueOf(correctValue + incorrectValue);
+        double accuracyValue = ((double) correctValue * 100) / (double) (correctValue + incorrectValue);
 
-        viewScore.setText(String.valueOf(scoreValue) + " Pts");
+        viewScore.setText(scoreValue + " Pts");
         viewTotal.setText(String.valueOf(correctValue + incorrectValue));
         viewCorrect.setText(correctCount);
         viewIncorrect.setText(incorrectCount);
