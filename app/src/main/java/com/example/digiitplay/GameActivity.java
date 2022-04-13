@@ -43,6 +43,7 @@ public class GameActivity extends AppCompatActivity {
                 i2.putExtra("mode", String.valueOf(mode));
 
                 startActivity(i2);
+                finish();
             }
 
         }.start();
@@ -272,8 +273,6 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent setIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(setIntent);
         yourCountDownTimer.cancel();
         finish();
     }
