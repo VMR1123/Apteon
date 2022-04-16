@@ -13,8 +13,8 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
-    int right = 0, wrong = 0;
-
+    int right = 0, wrong = 0, rightEasy = 0, rightMed = 0, rightHard = 0, rightHardPlus = 0, wrongEasy = 0, wrongMed = 0, wrongHard = 0, wrongHardPlus = 0;
+    public int temp;
     public CountDownTimer yourCountDownTimer;
 
     @Override
@@ -24,37 +24,98 @@ public class GameActivity extends AppCompatActivity {
 
         Bundle i = getIntent().getExtras();
         int mode = i.getInt("mode");
+        temp = mode;
 
         TextView timer = findViewById(R.id.timer);
         TextView textView1 = findViewById(R.id.textView12);
 
-        yourCountDownTimer = new CountDownTimer(46000, 1000) {
+        if (mode < 9 && mode > 4) {
+            show(mode);
+            yourCountDownTimer = new CountDownTimer(46000, 1000) {
 
-            public void onTick(long millisUntilFinished) {
-                timer.setText(String.valueOf(millisUntilFinished / 1000));
-            }
+                public void onTick(long millisUntilFinished) {
+                    timer.setText(String.valueOf(millisUntilFinished / 1000));
+                }
 
-            public void onFinish() {
-                textView1.setText(R.string.timeUp);
-                Intent i2 = new Intent(getApplicationContext(), ScoreActivity.class);
+                public void onFinish() {
+                    textView1.setText(R.string.timeUp);
+                    Intent i2 = new Intent(getApplicationContext(), ScoreActivity.class);
 
-                i2.putExtra("correct", String.valueOf(right));
-                i2.putExtra("incorrect", String.valueOf(wrong));
-                i2.putExtra("mode", String.valueOf(mode));
+                    i2.putExtra("correct", String.valueOf(right));
+                    i2.putExtra("incorrect", String.valueOf(wrong));
+                    i2.putExtra("mode", String.valueOf(mode));
 
-                startActivity(i2);
-                finish();
-            }
+                    startActivity(i2);
+                    finish();
+                }
 
-        }.start();
+            }.start();
+        } else if (mode == 9) {
 
-        show(mode);
+            textView1.setText("Easy");
+            show(5);
+            yourCountDownTimer = new CountDownTimer(31000, 1000) {
+
+                public void onTick(long millisUntilFinished) {
+                    timer.setText(String.valueOf(millisUntilFinished / 1000));
+                }
+
+                public void onFinish() {
+                    textView1.setText("Moderate");
+                    show(6);
+                    yourCountDownTimer = new CountDownTimer(31000, 1000) {
+                        public void onTick(long millisUntilFinished) {
+                            timer.setText(String.valueOf(millisUntilFinished / 1000));
+                        }
+
+                        public void onFinish() {
+                            textView1.setText("Hard");
+                            show(7);
+                            yourCountDownTimer = new CountDownTimer(31000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                    timer.setText(String.valueOf(millisUntilFinished / 1000));
+                                }
+
+                                public void onFinish() {
+                                    textView1.setText("Hard +");
+                                    show(8);
+                                    yourCountDownTimer = new CountDownTimer(31000, 1000) {
+                                        public void onTick(long millisUntilFinished) {
+                                            timer.setText(String.valueOf(millisUntilFinished / 1000));
+                                        }
+
+                                        public void onFinish() {
+                                            textView1.setText(R.string.timeUp);
+                                            Intent i2 = new Intent(getApplicationContext(), ScoreActivity2.class);
+
+                                            i2.putExtra("mode", String.valueOf(mode));
+                                            i2.putExtra("correctEasy", String.valueOf(rightEasy));
+                                            i2.putExtra("correctMed", String.valueOf(rightMed));
+                                            i2.putExtra("correctHard", String.valueOf(rightHard));
+                                            i2.putExtra("correctHardPlus", String.valueOf(rightHardPlus));
+                                            i2.putExtra("incorrectEasy", String.valueOf(wrongEasy));
+                                            i2.putExtra("incorrectMed", String.valueOf(wrongMed));
+                                            i2.putExtra("incorrectHard", String.valueOf(wrongHard));
+                                            i2.putExtra("incorrectHardPlus", String.valueOf(wrongHardPlus));
+
+                                            startActivity(i2);
+                                            finish();
+                                        }
+                                    }.start();
+                                }
+                            }.start();
+                        }
+                    }.start();
+                }
+            }.start();
+        } else
+            show(mode);
     }
 
     public void number(String n, int mode) {
-        TextView num1 = (TextView) findViewById(R.id.num1);
-        TextView num2 = (TextView) findViewById(R.id.num2);
-        TextView num3 = (TextView) findViewById(R.id.num3);
+        TextView num1 = findViewById(R.id.num1);
+        TextView num2 = findViewById(R.id.num2);
+        TextView num3 = findViewById(R.id.num3);
 
         String n1, n2, n3;
 
@@ -62,11 +123,11 @@ public class GameActivity extends AppCompatActivity {
         n2 = num2.getText().toString();
         n3 = num3.getText().toString();
 
-        if (mode == 1 && n3.isEmpty())
+        if ((mode == 1 || mode == 5) && n3.isEmpty())
             num3.setText(n);
-        else if (mode == 2 && n2.isEmpty())
+        else if ((mode == 2 || mode == 6) && n2.isEmpty())
             num2.setText(n);
-        else if (mode == 3) {
+        else if (mode == 3 || mode == 7) {
             if (n1.isEmpty())
                 num1.setText(n);
             else if (n2.isEmpty())
@@ -82,9 +143,9 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void show(int mode) {
-        TextView num1 = (TextView) findViewById(R.id.num1);
-        TextView num2 = (TextView) findViewById(R.id.num2);
-        TextView num3 = (TextView) findViewById(R.id.num3);
+        TextView num1 = findViewById(R.id.num1);
+        TextView num2 = findViewById(R.id.num2);
+        TextView num3 = findViewById(R.id.num3);
 
         Button one = findViewById(R.id.one);
         Button two = findViewById(R.id.two);
@@ -187,11 +248,11 @@ public class GameActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mode == 1)
+                if (mode == 1 || mode == 5)
                     num3.setText(null);
-                else if (mode == 2)
+                else if (mode == 2 || mode == 6)
                     num2.setText(null);
-                else if (mode == 3) {
+                else if (mode == 3 || mode == 7) {
                     num1.setText(null);
                     num2.setText(null);
                 } else {
@@ -212,9 +273,9 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        TextView ans = (TextView) findViewById(R.id.answer);
+        TextView ans = findViewById(R.id.answer);
 
-        Button check = (Button) findViewById(R.id.check);
+        Button check = findViewById(R.id.check);
 
         Random random = new Random();
 
@@ -236,13 +297,13 @@ public class GameActivity extends AppCompatActivity {
 
         ans.setText(Integer.toString(answer));
 
-        if (mode == 1) {
+        if (mode == 1 || mode == 5) {
             num1.setText(Integer.toString(n1));
             num2.setText(Integer.toString(n2));
-        } else if (mode == 2) {
+        } else if (mode == 2 || mode == 6) {
             num1.setText(Integer.toString(n1));
             num3.setText(Integer.toString(n3));
-        } else if (mode == 3) {
+        } else if (mode == 3 || mode == 7) {
             num3.setText(Integer.toString(n3));
         }
 
@@ -256,11 +317,31 @@ public class GameActivity extends AppCompatActivity {
 
                     if (number1 * number2 + number3 != answer) {
                         Toast.makeText(getApplicationContext(), "Wrong Answer!!!", Toast.LENGTH_SHORT).show();
-                        wrong++;
+
+                        if (mode == 5 && temp == 9)
+                            wrongEasy++;
+                        else if (mode == 6 && temp == 9)
+                            wrongMed++;
+                        else if (mode == 7 && temp == 9)
+                            wrongHard++;
+                        else if (mode == 8 && temp == 9)
+                            wrongHardPlus++;
+                        else
+                            wrong++;
                         show(mode);
                     } else if (number1 * number2 + number3 == answer) {
                         Toast.makeText(getApplicationContext(), "Correct Answer!!!", Toast.LENGTH_SHORT).show();
-                        right++;
+
+                        if (mode == 5 && temp == 9)
+                            rightEasy++;
+                        else if (mode == 6 && temp == 9)
+                            rightMed++;
+                        else if (mode == 7 && temp == 9)
+                            rightHard++;
+                        else if (mode == 8 && temp == 9)
+                            rightHardPlus++;
+                        else
+                            right++;
                         show(mode);
                     }
                 } catch (NumberFormatException e) {
@@ -273,7 +354,8 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        yourCountDownTimer.cancel();
+        if(temp > 5)
+            yourCountDownTimer.cancel();
         finish();
     }
 }

@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Button hard = findViewById(R.id.hard);
         Button hardPlus = findViewById(R.id.hardplus);
 
+        Button easyComp = findViewById(R.id.easyComp);
+        Button mediumComp = findViewById(R.id.medComp);
+        Button hardComp = findViewById(R.id.hardComp);
+        Button hardPlusComp = findViewById(R.id.hardplusComp);
+        Button alltogether = findViewById(R.id.alltogether);
+
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +62,56 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 4;
+                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                i.putExtra("mode", mode);
+                startActivity(i);
+            }
+        });
+
+        easyComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mode = 5;
+                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                i.putExtra("mode", mode);
+                startActivity(i);
+            }
+        });
+
+        mediumComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mode = 6;
+                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                i.putExtra("mode", mode);
+                startActivity(i);
+            }
+        });
+
+        hardComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mode = 7;
+                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                i.putExtra("mode", mode);
+                startActivity(i);
+            }
+        });
+
+        hardPlusComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mode = 8;
+                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                i.putExtra("mode", mode);
+                startActivity(i);
+            }
+        });
+
+        alltogether.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mode = 9;
                 Intent i = new Intent(getApplicationContext(), GameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);

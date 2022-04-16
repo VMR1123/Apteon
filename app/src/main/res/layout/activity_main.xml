@@ -10,56 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:textStyle="italic"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/digiplay"
         android:textColor="@color/orange"
         android:textSize="30sp"
-        android:text="@string/digiplay" />
-
-    <Button
-        android:id="@+id/easy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="125dp"
-        android:background="@drawable/rounded_edit_text1"
-        android:textColor="@color/white"
-        android:text="@string/easy" />
-
-    <Button
-        android:id="@+id/med"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/easy"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edit_text1"
-        android:textColor="@color/white"
-        android:text="@string/moderate" />
-
-    <Button
-        android:id="@+id/hard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/med"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edit_text1"
-        android:text="@string/hard"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/hardplus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hard"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_edit_text1"
-        android:textColor="@color/white"
-        android:text="@string/hard_plus" />
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView2"
@@ -90,7 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_toStartOf="@id/easy"
         android:layout_marginTop="95dp"
         android:alpha=".4"
         android:rotation="45"
@@ -101,9 +57,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hard"
         android:layout_marginStart="40dp"
-        android:layout_toEndOf="@id/hard"
         android:alpha=".15"
         android:rotation="30"
         android:text="@string/_6"
@@ -113,7 +67,6 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hardplus"
         android:layout_marginStart="80dp"
         android:alpha=".15"
         android:rotation="-30"
@@ -124,13 +77,171 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hardplus"
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
-        android:layout_toEndOf="@id/hardplus"
         android:alpha=".50"
         android:rotation="-120"
         android:text="@string/_3"
         android:textSize="35sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rounded_num_button">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/easy"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/moderate"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/hard"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hardplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/hard_plus"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/practice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Practice"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rounded_num_button">
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/easyComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/easy"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/medComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/moderate"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hardComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/hard"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hardplusComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text1"
+                android:text="@string/hard_plus"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/competetive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Competetive"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/alltogether"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/rounded_edit_text1"
+            android:text="All"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

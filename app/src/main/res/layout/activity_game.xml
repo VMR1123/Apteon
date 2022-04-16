@@ -41,7 +41,7 @@
             android:layout_marginEnd="5dp"
             android:background="@drawable/rounded_num_button"
             android:gravity="center"
-            android:textSize="20sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -60,7 +60,7 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/rounded_num_button"
             android:gravity="center"
-            android:textSize="20sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -75,7 +75,7 @@
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:gravity="center"
-            android:textSize="24sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
 
