@@ -3,7 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:id="@+id/r1">
+
+    <TextView
+        android:id="@+id/_321"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:translationZ="1dp"
+        android:textColor="@color/black"
+        android:textSize="100sp"/>
 
     <LinearLayout
         android:id="@+id/ll1"
@@ -56,8 +68,8 @@
             android:id="@+id/num3"
             android:layout_width="52dp"
             android:layout_height="52dp"
-            android:layout_marginEnd="5dp"
             android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/rounded_num_button"
             android:gravity="center"
             android:textSize="23sp" />
@@ -92,8 +104,8 @@
 
     <TextView
         android:id="@+id/timer"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
@@ -225,5 +237,4 @@
             android:background="@drawable/rounded_num_button"
             android:text="@string/clear" />
     </RelativeLayout>
-
 </RelativeLayout>
