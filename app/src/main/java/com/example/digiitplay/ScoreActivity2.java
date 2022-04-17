@@ -1,12 +1,18 @@
 package com.example.digiitplay;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.widget.TextView;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class ScoreActivity2 extends AppCompatActivity {
+
+    DbHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,5 +69,13 @@ public class ScoreActivity2 extends AppCompatActivity {
         viewIncorrect.setText(String.valueOf(i2));
         viewAccuracy.setText(String.format("%.2f", accuracyValue) + "%");
 
+        db = new DbHandler(this);
+
+        SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+        SimpleDateFormat time = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        String currentDate = date.format(new Date());
+        String currentTime = time.format(new Date());
+
+        db.insertData(modeValue, String.valueOf(scoreValue), String.valueOf(accuracyValue), currentDate, currentTime);
     }
 }
