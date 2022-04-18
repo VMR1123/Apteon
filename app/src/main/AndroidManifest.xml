@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiitPlay">
         <activity
+            android:name=".ScoreHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".ScoreActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />

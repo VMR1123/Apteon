@@ -59,10 +59,8 @@ public class ScoreActivity extends AppCompatActivity {
         db = new DbHandler(this);
 
         SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        SimpleDateFormat time = new SimpleDateFormat("HH:mm", Locale.getDefault());
         String currentDate = date.format(new Date());
-        String currentTime = time.format(new Date());
 
-        db.insertData(modeValue, String.valueOf(scoreValue), String.valueOf(accuracyValue), currentDate, currentTime);
+        db.insertData(modeValue, scoreValue, accuracyValue, currentDate);
     }
 }

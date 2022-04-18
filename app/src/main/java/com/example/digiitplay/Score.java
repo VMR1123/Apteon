@@ -3,20 +3,37 @@ package com.example.digiitplay;
 
 public class Score {
     private int id;
-    private String score;
+    private int score;
     private String date;
     private String time;
-    private String accuracy;
+    private double accuracy;
 
     public Score() {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() { return time; }
+
+    public double getAccuracy() { return accuracy; }
+
+
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setScore(String score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
@@ -26,5 +43,6 @@ public class Score {
 
     public void setTime(String time) { this.time = time; }
 
-    public void setAccuracy(String accuracy) { this.accuracy = accuracy; }
+    public void setAccuracy(double accuracy) { this.accuracy = accuracy; }
+
 }

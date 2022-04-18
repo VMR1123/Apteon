@@ -22,7 +22,7 @@ public class DbHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String attributes = "id INTEGER PRIMARY KEY,score TEXT, accuracy TEXT, date TEXT, time TEXT";
+        String attributes = "id INTEGER PRIMARY KEY,score INTEGER, accuracy REAL, date TEXT";
         String createEasyTable = "CREATE TABLE easy_comp(" + attributes + ")";
         String createMedTable = "CREATE TABLE moderate_comp(" + attributes + ")";
         String createHardTable = "CREATE TABLE hard_comp(" + attributes + ")";
@@ -41,12 +41,11 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(dropTable);
     }
 
-    public void insertData(int mode, String score, String accuracy, String date, String time) {
+    public void insertData(int mode, int score, double accuracy, String date) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("score", score);
         contentValues.put("date", date);
-        contentValues.put("time", time);
         contentValues.put("accuracy", accuracy);
 
         long result = sqLiteDatabase.insert(modes[mode - 5], null, contentValues);
@@ -63,10 +62,9 @@ public class DbHandler extends SQLiteOpenHelper {
             do {
                 Score score = new Score();
                 score.setId(Integer.parseInt(cursor.getString(0)));
-                score.setScore(cursor.getString(1));
-                score.setDate(cursor.getString(2));
-                score.setTime(cursor.getString(3));
-                score.setAccuracy(cursor.getString(4));
+                score.setScore(Integer.parseInt(cursor.getString(1)));
+                score.setAccuracy(Double.parseDouble(cursor.getString(2)));
+                score.setDate(cursor.getString(3));
                 scoreArrayList.add(score);
             } while (cursor.moveToNext());
         }
@@ -84,13 +82,48 @@ public class DbHandler extends SQLiteOpenHelper {
             do {
                 Score score = new Score();
                 score.setId(Integer.parseInt(cursor.getString(0)));
-                score.setScore(cursor.getString(1));
-                score.setDate(cursor.getString(2));
-                score.setTime(cursor.getString(3));
-                score.setAccuracy(cursor.getString(4));
+                score.setScore(Integer.parseInt(cursor.getString(1)));
+                score.setAccuracy(Double.parseDouble(cursor.getString(2)));
+                score.setDate(cursor.getString(3));
                 scoreArrayList.add(score);
             } while (cursor.moveToNext());
         }
         return scoreArrayList;
+    }
+
+    public String getRoundCount(int mode) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        ArrayList<Score> scoreArrayList = new ArrayList<>();
+        String select = "SELECT COUNT(id) from " + modes[mode - 5]+";";
+        Cursor cursor = sqLiteDatabase.rawQuery(select, null);
+
+        cursor.moveToFirst();
+        String count = cursor.getString(0);
+        return count;
+    }
+
+    public String getTotalScore(int mode) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        ArrayList<Score> scoreArrayList = new ArrayList<>();
+        String select = "SELECT SUM(score) from " + modes[mode - 5]+";";
+        Cursor cursor = sqLiteDatabase.rawQuery(select, null);
+
+        cursor.moveToFirst();
+        String sum = cursor.getString(0);
+        return sum;
+    }
+
+    public String getAverageAccuracy(int mode) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        ArrayList<Score> scoreArrayList = new ArrayList<>();
+        String select = "SELECT AVG(accuracy) from " + modes[mode - 5]+";";
+        Cursor cursor = sqLiteDatabase.rawQuery(select, null);
+
+        cursor.moveToFirst();
+        String accuracy = cursor.getString(0);
+        return accuracy;
     }
 }

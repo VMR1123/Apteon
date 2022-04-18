@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         Button hardPlusComp = findViewById(R.id.hardplusComp);
         Button alltogether = findViewById(R.id.alltogether);
 
+        Button scoreHistory = findViewById(R.id.score);
+
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
                 int mode = 9;
                 Intent i = new Intent(getApplicationContext(), GameActivity.class);
                 i.putExtra("mode", mode);
+                startActivity(i);
+            }
+        });
+
+        scoreHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ScoreHistoryActivity.class);
                 startActivity(i);
             }
         });
