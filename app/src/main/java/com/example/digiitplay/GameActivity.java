@@ -25,7 +25,7 @@ public class GameActivity extends AppCompatActivity {
 
         timer = findViewById(R.id.timer);
         textView1 = findViewById(R.id.textView12);
-        countDown = findViewById(R.id._321);
+        countDown = findViewById(R.id.timer_321);
 
         num1 = findViewById(R.id.num1);
         num2 = findViewById(R.id.num2);

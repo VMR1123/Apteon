@@ -3,18 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/rounded_edit_text1.xml" value="0.292" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/rounded_num_button.xml" value="0.322" />
-        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/square.xml" value="0.2745" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/square.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/tab_background.xml" value="0.322" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/bottom_navigation_menu.xml" value="0.3355" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_dashboard.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_game.xml" value="0.3569230769230769" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_main.xml" value="0.3569230769230769" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_score.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_score_history.xml" value="0.3625" />
-        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_all.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_all.xml" value="0.3111111111111111" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_blank.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_easy.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_games.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_hard.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_hard_plus.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_leaderboards.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_medium.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/score_list_template.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3355" />
         <entry key="..\:/AndroidProjects/DigiitPlay/app/src/main/res/drawable-v24/circular_button.xml" value="0.322" />
         <entry key="..\:/AndroidProjects/DigiitPlay/app/src/main/res/drawable-v24/rounded_edit_text1.xml" value="0.322" />
         <entry key="..\:/AndroidProjects/DigiitPlay/app/src/main/res/drawable-v24/rounded_num_button.xml" value="0.322" />

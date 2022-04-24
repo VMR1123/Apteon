@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".AllFragment">
+    tools:context=".ScoreHistory.AllFragment">
 
     <TextView
         android:id="@+id/textView14"
@@ -34,9 +34,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv2"
-        android:layout_below="@id/textView15"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView15" />
 
     <View
         android:id="@+id/divider1"

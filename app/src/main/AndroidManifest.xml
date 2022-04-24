@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiitPlay">
         <activity
-            android:name=".ScoreHistoryActivity"
+            android:name=".ScoreHistory.ScoreHistoryActivity"
             android:exported="false" />
         <activity
             android:name=".ScoreActivity"
@@ -25,6 +25,9 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard.DashboardActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
