@@ -1,10 +1,13 @@
-package com.example.digiitplay;
+package com.example.digiitplay.DigitPlay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.digiitplay.DbHandler;
+import com.example.digiitplay.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

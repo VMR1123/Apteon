@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.digiitplay.MainActivity;
+import com.example.digiitplay.DigitPlay.DigitPlayActivity;
 import com.example.digiitplay.R;
 
 public class GamesFragment extends Fragment {
@@ -28,7 +28,7 @@ public class GamesFragment extends Fragment {
         rl1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getActivity(), MainActivity.class);
+                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
                 startActivity(i);
             }
         });
@@ -36,7 +36,7 @@ public class GamesFragment extends Fragment {
         rl2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getActivity(), MainActivity.class);
+                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
                 startActivity(i);
             }
         });
@@ -44,7 +44,7 @@ public class GamesFragment extends Fragment {
         rl3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getActivity(), MainActivity.class);
+                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
                 startActivity(i);
             }
         });

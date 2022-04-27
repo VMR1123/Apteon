@@ -1,4 +1,4 @@
-package com.example.digiitplay;
+package com.example.digiitplay.DigitPlay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,9 +9,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.digiitplay.R;
+
 import java.util.Random;
 
-public class GameActivity extends AppCompatActivity {
+public class DigitPlayGameActivity extends AppCompatActivity {
     int right = 0, wrong = 0, rightEasy = 0, rightMed = 0, rightHard = 0, rightHardPlus = 0, wrongEasy = 0, wrongMed = 0, wrongHard = 0, wrongHardPlus = 0;
     public int temp;
     public CountDownTimer yourCountDownTimer;
@@ -439,7 +441,7 @@ public class GameActivity extends AppCompatActivity {
                         show(mode);
                     }
                 } catch (NumberFormatException e) {
-                    Toast.makeText(GameActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DigitPlayGameActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
                     show(mode);
                 }
             }

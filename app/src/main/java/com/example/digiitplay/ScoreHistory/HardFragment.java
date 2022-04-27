@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -13,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digiitplay.DbHandler;
 import com.example.digiitplay.R;
-import com.example.digiitplay.RecyclerViewAdapter;
-import com.example.digiitplay.Score;
+import com.example.digiitplay.DigitPlay.RecyclerViewAdapter;
+import com.example.digiitplay.DigitPlay.Score;
 
 import java.util.ArrayList;
 

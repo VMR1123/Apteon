@@ -9,15 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.digiitplay.DbHandler;
 import com.example.digiitplay.R;
-import com.example.digiitplay.RecyclerViewAdapter;
-import com.example.digiitplay.Score;
-
-import org.w3c.dom.Text;
+import com.example.digiitplay.DigitPlay.RecyclerViewAdapter;
+import com.example.digiitplay.DigitPlay.Score;
 
 import java.util.ArrayList;
 

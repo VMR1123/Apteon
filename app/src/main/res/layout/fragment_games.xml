@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textSize="20sp"
-            android:text="DigitPlay" />
+            android:text="@string/digit_play"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:textSize="20sp"
-            android:text="Operator Overload" />
+            android:text="@string/operator_overload" />
 
     </RelativeLayout>
 
@@ -57,8 +57,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textSize="20sp"
-            android:text="Shape Sudoku" />
+            android:text="@string/shape_sudoku"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 

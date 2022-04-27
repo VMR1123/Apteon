@@ -1,4 +1,4 @@
-package com.example.digiitplay;
+package com.example.digiitplay.DigitPlay;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import java.util.Date;
 import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.digiitplay.DbHandler;
+import com.example.digiitplay.EncryptDecrypt;
+import com.example.digiitplay.R;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -56,10 +60,20 @@ public class ScoreActivity extends AppCompatActivity {
         viewIncorrect.setText(incorrectCount);
         viewAccuracy.setText(String.format("%.2f", accuracyValue) + "%");
 
-        db = new DbHandler(this);
-
         SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         String currentDate = date.format(new Date());
+
+        EncryptDecrypt ec = new EncryptDecrypt();
+
+        String scoreEncrypted = ec.encrypt(String.valueOf(scoreValue));
+        String accuracyEncrypted = ec.encrypt(String.valueOf(accuracyValue));
+        String dateEncrypted = ec.encrypt(currentDate);
+
+        String dateDecrypted = ec.decrypt(dateEncrypted);
+
+        db = new DbHandler(this);
+
+        db.insertDataEncrypted(scoreEncrypted, accuracyEncrypted, dateEncrypted);
 
         db.insertData(modeValue, scoreValue, accuracyValue, currentDate);
     }

@@ -13,18 +13,18 @@
             android:name=".ScoreHistory.ScoreHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".ScoreActivity"
+            android:name=".DigitPlay.ScoreActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".DigitPlay.DigitPlayActivity" />
         <activity
-            android:name=".ScoreActivity2"
+            android:name=".DigitPlay.ScoreActivity2"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".DigitPlay.DigitPlayActivity" />
         <activity
-            android:name=".GameActivity"
+            android:name=".DigitPlay.DigitPlayGameActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DigitPlay.DigitPlayActivity"
             android:exported="false" />
         <activity
             android:name=".Dashboard.DashboardActivity"

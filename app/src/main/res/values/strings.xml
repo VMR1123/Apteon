@@ -21,10 +21,10 @@
     <string name="_9">9</string>
     <string name="clear">Clear</string>
     <string name="easy">Easy</string>
-    <string name="digiplay">DigiPlay</string>
+    <string name="digit_play">Digit Play</string>
     <string name="moderate">Moderate</string>
     <string name="hard">Hard</string>
     <string name="hard_plus">Hard +</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="operator_overload">Operator Overload</string>
+    <string name="shape_sudoku">Shape Sudoku</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.digiitplay;
+package com.example.digiitplay.DigitPlay;
 
 
 public class Score {

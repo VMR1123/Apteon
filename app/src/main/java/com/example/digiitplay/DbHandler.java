@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.digiitplay.DigitPlay.Score;
+
 import java.util.ArrayList;
 
 public class DbHandler extends SQLiteOpenHelper {
@@ -24,11 +26,13 @@ public class DbHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String attributes = "id INTEGER PRIMARY KEY,score INTEGER, accuracy REAL, date TEXT";
         String createEasyTable = "CREATE TABLE easy_comp(" + attributes + ")";
+        String createEasyEncryptedTable = "CREATE TABLE easy_encrypted_comp(id INTEGER PRIMARY KEY, score TEXT, accuracy TEXT, date TEXT)";
         String createMedTable = "CREATE TABLE moderate_comp(" + attributes + ")";
         String createHardTable = "CREATE TABLE hard_comp(" + attributes + ")";
         String createHardPlusTable = "CREATE TABLE hardplus_comp(" + attributes + ")";
         String createAllModeTable = "CREATE TABLE allmodes_comp(" + attributes + ")";
         sqLiteDatabase.execSQL(createEasyTable);
+        sqLiteDatabase.execSQL(createEasyEncryptedTable);
         sqLiteDatabase.execSQL(createMedTable);
         sqLiteDatabase.execSQL(createHardTable);
         sqLiteDatabase.execSQL(createHardPlusTable);
@@ -49,6 +53,35 @@ public class DbHandler extends SQLiteOpenHelper {
         contentValues.put("accuracy", accuracy);
 
         long result = sqLiteDatabase.insert(modes[mode - 5], null, contentValues);
+    }
+
+    public void insertDataEncrypted(String score, String accuracy, String date) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("score", score);
+        contentValues.put("date", date);
+        contentValues.put("accuracy", accuracy);
+
+        long result = sqLiteDatabase.insert("easy_encrypted_comp", null, contentValues);
+    }
+
+    public ArrayList<String> getDecryptedData() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        ArrayList<Score> scoreArrayList = new ArrayList<>();
+        String select = "SELECT * from easy_encrypted_comp;";
+        Cursor cursor = sqLiteDatabase.rawQuery(select, null);
+
+        cursor.moveToFirst();
+        String score = cursor.getString(1);
+        String accuracy = cursor.getString(2);
+        String date = cursor.getString(3);
+
+        ArrayList<String> arr = new ArrayList<>(3);
+        arr.add(score);
+        arr.add(accuracy);
+        arr.add(date);
+        return arr;
     }
 
     public ArrayList<Score> getTop5Scores(int mode) {

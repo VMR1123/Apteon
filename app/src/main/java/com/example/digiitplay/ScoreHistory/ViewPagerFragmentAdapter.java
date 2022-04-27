@@ -1,4 +1,4 @@
-package com.example.digiitplay;
+package com.example.digiitplay.ScoreHistory;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

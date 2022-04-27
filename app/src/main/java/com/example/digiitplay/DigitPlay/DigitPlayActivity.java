@@ -1,4 +1,4 @@
-package com.example.digiitplay;
+package com.example.digiitplay.DigitPlay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
+import com.example.digiitplay.R;
 import com.example.digiitplay.ScoreHistory.ScoreHistoryActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class DigitPlayActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_digit_play);
 
         Button easy = findViewById(R.id.easy);
         Button medium = findViewById(R.id.med);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 1;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 2;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 3;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 4;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 5;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 6;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 7;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 8;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int mode = 9;
-                Intent i = new Intent(getApplicationContext(), GameActivity.class);
+                Intent i = new Intent(getApplicationContext(), DigitPlayGameActivity.class);
                 i.putExtra("mode", mode);
                 startActivity(i);
             }
