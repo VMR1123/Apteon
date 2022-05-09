@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/digit_play"
         android:textColor="@color/orange"
@@ -29,65 +29,151 @@
 
         <LinearLayout
             android:id="@+id/ll1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
-            android:orientation="horizontal">
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/p1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/easy"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/easy"
-                android:textColor="@color/white" />
+                android:text="Easy"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/med"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/moderate"
-                android:textColor="@color/white" />
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:text="45 sec. Round | Easy Expressions"-->
+            <!--                android:textColor="@color/gray"-->
+            <!--                android:textSize="14sp"-->
+            <!--                android:textStyle="italic" />-->
         </LinearLayout>
+
+        <Button
+            android:id="@+id/q1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/p1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="26dp"
+            android:layout_toRightOf="@id/ll1"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/ll2"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
             android:layout_below="@id/ll1"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/hard"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/hard"
-                android:textColor="@color/white" />
+                android:text="Moderate"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/hardplus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/hard_plus"
-                android:textColor="@color/white" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/q2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll1"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/q3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll1"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard +"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/q4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll1"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
         <TextView
-            android:id="@+id/practice"
-            android:layout_width="wrap_content"
+            android:id="@+id/p1"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Practice"
-            android:textSize="30sp" />
+            android:alpha=".75"
+            android:background="@drawable/title_background"
+            android:gravity="center"
+            android:text="PRACTICE"
+            android:textSize="28sp" />
 
     </RelativeLayout>
 
@@ -96,97 +182,184 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl2"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/rounded_num_button">
 
-        <LinearLayout
-            android:id="@+id/ll2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/easyComp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/easy"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/medComp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/moderate"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ll2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/hardComp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/hard"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/hardplusComp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edit_text1"
-                android:text="@string/hard_plus"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
         <TextView
-            android:id="@+id/competetive"
-            android:layout_width="wrap_content"
+            android:id="@+id/c3"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Competetive"
-            android:textSize="30sp" />
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/title_background"
+            android:alpha=".75"
+            android:text="COMPETITIVE"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/c3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Easy"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/alltogether"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ll3"
+            android:id="@+id/q5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/c3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/ll5"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll5"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/rounded_edit_text1"
-            android:text="All"
-            android:textColor="@color/white" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Moderate"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/q6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll6"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/ll7"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Hard"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/q7"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll7"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/ll8"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Hard +"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/q8"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll7"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll8"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/ll9"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_num_button"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textColor="@color/orange"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/q9"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/ll8"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/ll9"
+            android:alpha=".4"
+            android:background="@drawable/ic_question" />
 
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/score"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rl3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_edit_text1"
-        android:text="Score History"
-        android:textColor="@color/white" />
-
 
 </RelativeLayout>

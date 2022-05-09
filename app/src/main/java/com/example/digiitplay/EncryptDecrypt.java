@@ -10,7 +10,7 @@ public class EncryptDecrypt {
     public String encrypt(String plaintext) {
         String encrypted = "1";
         try {
-            encrypted = AESCrypt.encrypt("1123581321", plaintext);
+            encrypted = AESCrypt.encrypt("1123581321345589", plaintext);
         } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }
@@ -20,7 +20,7 @@ public class EncryptDecrypt {
     public String decrypt(String ciphertext) {
         String decrypted = "1";
         try {
-            decrypted = AESCrypt.decrypt("1123581321", ciphertext);
+            decrypted = AESCrypt.decrypt("1123581321345589", ciphertext);
         } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }

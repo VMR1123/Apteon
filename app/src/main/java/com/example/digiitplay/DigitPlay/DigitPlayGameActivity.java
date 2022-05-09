@@ -14,6 +14,7 @@ import com.example.digiitplay.R;
 import java.util.Random;
 
 public class DigitPlayGameActivity extends AppCompatActivity {
+    private long pressedTime;
     int right = 0, wrong = 0, rightEasy = 0, rightMed = 0, rightHard = 0, rightHardPlus = 0, wrongEasy = 0, wrongMed = 0, wrongHard = 0, wrongHardPlus = 0;
     public int temp;
     public CountDownTimer yourCountDownTimer;
@@ -448,10 +449,26 @@ public class DigitPlayGameActivity extends AppCompatActivity {
         });
     }
 
+//    @Override
+//    public void onBackPressed() {
+//        if (temp > 4)
+//            yourCountDownTimer.cancel();
+//        finish();
+//    }
+
     @Override
     public void onBackPressed() {
-        if (temp > 4)
+
+        if (temp > 4) {
             yourCountDownTimer.cancel();
-        finish();
+            if (pressedTime + 2000 > System.currentTimeMillis()) {
+                super.onBackPressed();
+                finish();
+            } else {
+                Toast.makeText(getBaseContext(), "Press back again to Exit! Current Round Progress Will be Discarded!!! ", Toast.LENGTH_SHORT).show();
+            }
+            pressedTime = System.currentTimeMillis();
+        } else
+            finish();
     }
 }

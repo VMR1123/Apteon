@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.digiitplay.DbHandler;
+import com.example.digiitplay.EncryptDecrypt;
 import com.example.digiitplay.R;
 
 import java.text.SimpleDateFormat;
@@ -72,11 +73,17 @@ public class ScoreActivity2 extends AppCompatActivity {
         viewIncorrect.setText(String.valueOf(i2));
         viewAccuracy.setText(String.format("%.2f", accuracyValue) + "%");
 
-        db = new DbHandler(this);
-
         SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         String currentDate = date.format(new Date());
 
-        db.insertData(modeValue, scoreValue, accuracyValue, currentDate);
+        EncryptDecrypt ec = new EncryptDecrypt();
+
+        String scoreEncrypted = ec.encrypt(String.valueOf(scoreValue));
+        String accuracyEncrypted = ec.encrypt(String.format("%.2f", accuracyValue));
+        String dateEncrypted = ec.encrypt(currentDate);
+
+        db = new DbHandler(this);
+
+        db.insertDataEncrypted(modeValue, scoreEncrypted, accuracyEncrypted, dateEncrypted);
     }
 }

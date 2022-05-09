@@ -134,8 +134,8 @@
 
         <Button
             android:id="@+id/one"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_toStartOf="@id/two"
             android:background="@drawable/rounded_num_button"
             android:text="@string/_1"
@@ -143,20 +143,20 @@
 
         <Button
             android:id="@+id/two"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_num_button"
             android:text="@string/_2"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/three"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_toEndOf="@id/two"
             android:background="@drawable/rounded_num_button"
             android:text="@string/_3"
@@ -164,8 +164,8 @@
 
         <Button
             android:id="@+id/four"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_below="@id/two"
             android:layout_toStartOf="@id/five"
             android:background="@drawable/rounded_num_button"
@@ -174,8 +174,8 @@
 
         <Button
             android:id="@+id/five"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_below="@id/two"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dp"
@@ -187,8 +187,8 @@
 
         <Button
             android:id="@+id/six"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_below="@id/two"
             android:layout_toEndOf="@id/five"
             android:background="@drawable/rounded_num_button"
@@ -197,8 +197,8 @@
 
         <Button
             android:id="@+id/seven"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_below="@id/five"
             android:layout_toStartOf="@id/eight"
             android:background="@drawable/rounded_num_button"
@@ -207,8 +207,8 @@
 
         <Button
             android:id="@+id/eight"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_below="@id/five"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dp"
@@ -216,12 +216,12 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_num_button"
             android:text="@string/_8"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/nine"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_below="@id/five"
             android:layout_toEndOf="@id/eight"
             android:background="@drawable/rounded_num_button"
@@ -230,8 +230,8 @@
 
         <Button
             android:id="@+id/clear"
-            android:layout_width="310dp"
-            android:layout_height="50dp"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
             android:layout_below="@id/eight"
             android:layout_centerHorizontal="true"
             android:background="@drawable/rounded_num_button"

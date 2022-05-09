@@ -3,6 +3,7 @@ package com.example.digiitplay.DigitPlay;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -66,15 +67,11 @@ public class ScoreActivity extends AppCompatActivity {
         EncryptDecrypt ec = new EncryptDecrypt();
 
         String scoreEncrypted = ec.encrypt(String.valueOf(scoreValue));
-        String accuracyEncrypted = ec.encrypt(String.valueOf(accuracyValue));
+        String accuracyEncrypted = ec.encrypt(String.format("%.2f", accuracyValue));
         String dateEncrypted = ec.encrypt(currentDate);
-
-        String dateDecrypted = ec.decrypt(dateEncrypted);
 
         db = new DbHandler(this);
 
-        db.insertDataEncrypted(scoreEncrypted, accuracyEncrypted, dateEncrypted);
-
-        db.insertData(modeValue, scoreValue, accuracyValue, currentDate);
+        db.insertDataEncrypted(modeValue, scoreEncrypted, accuracyEncrypted, dateEncrypted);
     }
 }

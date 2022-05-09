@@ -40,8 +40,8 @@ public class HardFragment extends Fragment {
         recyclerView2.setHasFixedSize(true);
         recyclerView2.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        ArrayList<Score> top5 = dbh.getTop5Scores(7);
-        ArrayList<Score> last5 = dbh.getLast5Scores(7);
+        ArrayList<Score> top5 = dbh.getTop5EncryptedScores(7);
+        ArrayList<Score> last5 = dbh.getLast5EncryptedScores(7);
 
         RecyclerViewAdapter recyclerViewAdapter1 = new RecyclerViewAdapter(view.getContext(), top5);
         recyclerView1.setAdapter(recyclerViewAdapter1);

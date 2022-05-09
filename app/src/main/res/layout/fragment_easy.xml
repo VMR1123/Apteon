@@ -52,9 +52,9 @@
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_below="@id/rv1"
-        android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/square"/>
+        android:layout_marginTop="8dp"
+        android:background="@drawable/square" />
 
     <View
         android:id="@+id/divider2"

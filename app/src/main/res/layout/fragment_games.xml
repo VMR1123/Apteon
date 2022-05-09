@@ -15,13 +15,34 @@
         android:layout_weight="1" >
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
             android:layout_centerInParent="true"
             android:text="@string/digit_play"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_num_button"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/b1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_num_button"
+            android:text="Score History" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -35,31 +56,34 @@
         android:layout_weight="1" >
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
             android:layout_centerInParent="true"
-            android:textSize="20sp"
-            android:text="@string/operator_overload" />
+            android:text="Operator Overload"
+            android:textSize="30sp" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/rounded_num_button"
-        android:layout_weight="1" >
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/shape_sudoku"
-            android:textSize="20sp" />
+            android:layout_below="@id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_num_button"
+            android:text="Play" />
 
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Score History"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/b3"
+            android:background="@drawable/rounded_num_button" />
     </RelativeLayout>
 
 </LinearLayout>

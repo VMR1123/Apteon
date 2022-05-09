@@ -1,23 +1,27 @@
 package com.example.digiitplay.Dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.digiitplay.DbHandler;
+import com.example.digiitplay.DigitPlay.DigitPlayActivity;
 import com.example.digiitplay.EncryptDecrypt;
 import com.example.digiitplay.R;
+import com.example.digiitplay.ScoreHistory.ScoreHistoryActivity;
 import com.scottyab.aescrypt.AESCrypt;
 
 import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {
 
-    TextView score, accuracy, date;
+    RelativeLayout rl1, rl2, rl3;;
     EncryptDecrypt aes = new EncryptDecrypt();
     DbHandler db;
 
@@ -26,17 +30,33 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        db = new DbHandler(getActivity());
+        rl1 = view.findViewById(R.id.rl1);
+        rl2 = view.findViewById(R.id.rl2);
+        rl3 = view.findViewById(R.id.rl3);
 
-        ArrayList<String> arr = db.getDecryptedData();
+        rl1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
+                startActivity(i);
+            }
+        });
 
-        score = view.findViewById(R.id.score);
-        accuracy = view.findViewById(R.id.accuracy);
-        date = view.findViewById(R.id.date);
+        rl2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
+                startActivity(i);
+            }
+        });
 
-        score.setText(aes.decrypt(arr.get(0)));
-        accuracy.setText(aes.decrypt(arr.get(1)));
-        date.setText(aes.decrypt(arr.get(2)));
+        rl3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), ScoreHistoryActivity.class);
+                startActivity(i);
+            }
+        });
 
         return view;
     }

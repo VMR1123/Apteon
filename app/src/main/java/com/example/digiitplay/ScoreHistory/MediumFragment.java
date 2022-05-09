@@ -22,7 +22,6 @@ public class MediumFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_medium, container, false);
 
         DbHandler dbh;
@@ -36,8 +35,8 @@ public class MediumFragment extends Fragment {
         recyclerView2.setHasFixedSize(true);
         recyclerView2.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        ArrayList<Score> top5 = dbh.getTop5Scores(6);
-        ArrayList<Score> last5 = dbh.getLast5Scores(6);
+        ArrayList<Score> top5 = dbh.getTop5EncryptedScores(6);
+        ArrayList<Score> last5 = dbh.getLast5EncryptedScores(6);
 
         RecyclerViewAdapter recyclerViewAdapter1 = new RecyclerViewAdapter(view.getContext(), top5);
         recyclerView1.setAdapter(recyclerViewAdapter1);
