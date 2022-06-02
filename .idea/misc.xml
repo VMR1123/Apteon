@@ -5,18 +5,28 @@
       <map>
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/circular_button.xml" value="0.3265" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/circular_button_2.xml" value="0.3265" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/i1.xml" value="0.325" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/i2.xml" value="0.325" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/i3.xml" value="0.325" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3095" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/rounded_check_button.xml" value="0.188" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/rounded_edit_text1.xml" value="0.292" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/rounded_num_button.xml" value="0.322" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/rounded_view.xml" value="0.3265" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/square.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable-v24/tab_background.xml" value="0.322" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/bottom_navigation_menu.xml" value="0.3355" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/doodle_layout.xml" value="0.249" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/i4.xml" value="0.325" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_change_password.xml" value="0.3095" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_double_up.xml" value="0.3095" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_down_arrow.xml" value="0.325" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_edit_info.xml" value="0.3095" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_email_logo.xml" value="0.309" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_game_icon.xml" value="0.3095" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3095" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_logout.xml" value="0.3095" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_person_logo.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_profile.xml" value="0.3095" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_question.xml" value="0.3265" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/ic_score.xml" value="0.3095" />
@@ -24,13 +34,25 @@
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/round_backgroud.xml" value="0.3265" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/drawable/title_background.xml" value="0.3095" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_challenging_shape_shift.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_dashboard.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_digit_play.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_game.xml" value="0.3569230769230769" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_main.xml" value="0.3569230769230769" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_operator_overload_dashboard.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_operator_overload_game.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_operator_overload_score.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_score.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_score_history.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_shape_shift_dashboard.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_shape_switch_game.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_sign_up.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/activity_splash_screen.xml" value="0.11666666666666667" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/avatar_card_layout.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/custom_alert.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/custom_alert_2.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/custom_alert_3.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_all.xml" value="0.3111111111111111" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_blank.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_easy.xml" value="0.3625" />
@@ -40,6 +62,7 @@
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_leaderboards.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_medium.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/layout_rv_card_leaderboard.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/layout/score_list_template.xml" value="0.3625" />
         <entry key="..\:/AndroidProjects/DigiPlay/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3355" />
         <entry key="..\:/AndroidProjects/DigiitPlay/app/src/main/res/drawable-v24/circular_button.xml" value="0.322" />

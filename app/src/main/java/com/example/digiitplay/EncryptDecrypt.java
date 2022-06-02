@@ -4,7 +4,6 @@ import com.scottyab.aescrypt.AESCrypt;
 
 import java.security.GeneralSecurityException;
 
-
 public class EncryptDecrypt {
 
     public String encrypt(String plaintext) {

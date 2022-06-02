@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "13564268814",
+    "firebase_url": "https://aption-1646139943072-default-rtdb.firebaseio.com",
+    "project_id": "aption-1646139943072",
+    "storage_bucket": "aption-1646139943072.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13564268814:android:1e40102ee8e3e22cde075f",
+        "android_client_info": {
+          "package_name": "com.example.digiitplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13564268814-b6i3h64ps4pfk22hing91ulq1d7nand4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIDHJBzj5-Q9VPMfqxuU8XBYYnyLojheA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13564268814-b6i3h64ps4pfk22hing91ulq1d7nand4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13564268814:android:7754e7dc4c343e26de075f",
+        "android_client_info": {
+          "package_name": "com.pbl.aption"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13564268814-b6i3h64ps4pfk22hing91ulq1d7nand4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIDHJBzj5-Q9VPMfqxuU8XBYYnyLojheA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13564268814-b6i3h64ps4pfk22hing91ulq1d7nand4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

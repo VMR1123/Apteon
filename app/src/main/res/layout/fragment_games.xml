@@ -19,9 +19,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="10dp"
             android:layout_centerInParent="true"
-            android:text="@string/digit_play"
+            android:layout_marginTop="10dp"
+            android:text="@string/operator_overload"
             android:textSize="30sp" />
 
         <Button
@@ -60,9 +60,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="10dp"
             android:layout_centerInParent="true"
-            android:text="Operator Overload"
+            android:layout_marginTop="10dp"
+            android:text="Shape Shift"
             android:textSize="30sp" />
 
         <Button

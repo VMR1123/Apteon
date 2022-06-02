@@ -5,35 +5,63 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Apteon"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiitPlay">
         <activity
-            android:name=".ScoreHistory.ScoreHistoryActivity"
+            android:name=".OperatorOverloadScoreHistory.ScoreHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".DigitPlay.ScoreActivity"
+            android:name=".OperatorOverload.OperatorOverloadScoreActivity"
             android:exported="false"
-            android:parentActivityName=".DigitPlay.DigitPlayActivity" />
+            android:parentActivityName=".OperatorOverload.OperatorOverloadDashboardActivity" />
         <activity
-            android:name=".DigitPlay.ScoreActivity2"
+            android:name=".OperatorOverload.OperatorOverloadScoreActivity2"
             android:exported="false"
-            android:parentActivityName=".DigitPlay.DigitPlayActivity" />
+            android:parentActivityName=".OperatorOverload.OperatorOverloadDashboardActivity" />
         <activity
-            android:name=".DigitPlay.DigitPlayGameActivity"
+            android:name=".OperatorOverload.OperatorOverloadGameActivity"
             android:exported="false" />
         <activity
-            android:name=".DigitPlay.DigitPlayActivity"
+            android:name=".OperatorOverload.OperatorOverloadDashboardActivity"
             android:exported="false" />
+
         <activity
-            android:name=".Dashboard.DashboardActivity"
+            android:name=".ShapeShift.ShapeShiftDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ShapeShift.ShapeShiftGameActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ShapeShift.ShapeShiftScoreActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ShapeShiftScoreHistory.ShapeShiftScoreHistoryActivity"
+            android:exported="false" />
+
+        <activity android:name=".login.login"
+            android:exported="false"/>
+
+        <activity android:name=".login.SignUp"
+            android:exported="false"/>
+
+        <activity android:name=".login.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Dashboard.DashboardActivity"
+            android:exported="false">
+
         </activity>
     </application>
 

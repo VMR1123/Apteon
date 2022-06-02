@@ -6,13 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.digiitplay.DigitPlay.DigitPlayActivity;
+import com.example.digiitplay.OperatorOverload.OperatorOverloadDashboardActivity;
 import com.example.digiitplay.R;
-import com.example.digiitplay.ScoreHistory.ScoreHistoryActivity;
+import com.example.digiitplay.OperatorOverloadScoreHistory.ScoreHistoryActivity;
+import com.example.digiitplay.ShapeShift.ShapeShiftDashboardActivity;
+import com.example.digiitplay.ShapeShiftScoreHistory.ShapeShiftScoreHistoryActivity;
 
 public class GamesFragment extends Fragment {
 
@@ -31,7 +32,7 @@ public class GamesFragment extends Fragment {
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
+                Intent i = new Intent(getActivity(), OperatorOverloadDashboardActivity.class);
                 startActivity(i);
             }
         });
@@ -39,7 +40,7 @@ public class GamesFragment extends Fragment {
         b3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getActivity(), DigitPlayActivity.class);
+                Intent i = new Intent(getActivity(), ShapeShiftDashboardActivity.class);
                 startActivity(i);
             }
         });
@@ -48,6 +49,14 @@ public class GamesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), ScoreHistoryActivity.class);
+                startActivity(i);
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), ShapeShiftScoreHistoryActivity.class);
                 startActivity(i);
             }
         });
