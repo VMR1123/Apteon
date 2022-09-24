@@ -152,11 +152,12 @@ public class login extends AppCompatActivity {
             return;
         }
 
+        /*
         if(!Pattern.matches(password_pattern,str_password)){
             et_password.setError("Invalid password!");
             et_password.requestFocus();
             return;
-        }
+        }*/
 
         if(!networkstate()){
             Toast.makeText(this, "No internet", Toast.LENGTH_SHORT).show();

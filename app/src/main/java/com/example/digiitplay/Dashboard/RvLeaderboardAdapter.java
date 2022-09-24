@@ -46,8 +46,7 @@ public class RvLeaderboardAdapter extends RecyclerView.Adapter<RvLeaderboardAdap
         holder.tv_name.setText(String.valueOf((leaderBoard_scores.get(position)).getUsername()));
         holder.tv_score.setText(String.valueOf((leaderBoard_scores.get(position)).getScore()));
         String accuracy = String.valueOf((leaderBoard_scores.get(position)).getAccuracy());
-        holder.tv_accuracy.setText(accuracy);
-
+        holder.tv_accuracy.setText(accuracy.substring(0,5));
     }
 
     @Override

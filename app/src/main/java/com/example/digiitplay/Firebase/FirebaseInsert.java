@@ -77,7 +77,7 @@ public class FirebaseInsert {
                     boolean res = leaderboard_check(game_name,ld_score);
                     Log.d("Leaderboard","got the data successfully");
 
-                    Toast.makeText(context, "Data Inserted", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context, "Data Inserted", Toast.LENGTH_LONG).show();
                 }
                 else{
                     Toast.makeText(context, "failed", Toast.LENGTH_LONG).show();
