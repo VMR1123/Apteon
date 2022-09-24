@@ -25,25 +25,28 @@
             android:layout_height="50dp"
             app:cardUseCompatPadding="true"
             app:cardElevation="4dp"
+            android:backgroundTint="@color/orange"
             app:cardCornerRadius="3dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:paddingStart="20dp"
+                android:paddingStart="0dp"
                 android:paddingEnd="5dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Username"
-                    android:layout_marginStart="20dp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
                     android:layout_weight="1"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Score"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:layout_weight="1"/>
 
@@ -52,6 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Accuracy"
+                    android:textColor="@color/white"
                     android:gravity="end"
                     android:layout_weight="1"/>
 
@@ -81,26 +85,29 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/orange"
             app:cardElevation="4dp"
             app:cardCornerRadius="3dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:paddingStart="20dp"
+                android:paddingStart="0dp"
                 android:paddingEnd="5dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Username"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/white"
                     android:layout_weight="1"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Score"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:layout_weight="1"/>
 
@@ -109,6 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Accuracy"
+                    android:textColor="@color/white"
                     android:gravity="end"
                     android:layout_weight="1"/>
 
