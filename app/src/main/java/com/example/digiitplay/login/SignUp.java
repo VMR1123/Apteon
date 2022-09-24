@@ -32,7 +32,7 @@ public class SignUp extends AppCompatActivity {
 
     String str_email,str_password,str_confirm_password,str_fullname, str_age;
 
-    String password_pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+    //String password_pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
     String fullname_pattern="[a-zA-Z][a-zA-Z ]+";
 
     @Override
@@ -78,11 +78,11 @@ public class SignUp extends AppCompatActivity {
             return;
         }
 
-        if(!Pattern.matches(password_pattern,str_password)){
+        /*if(!Pattern.matches(password_pattern,str_password)){
             et_password.setError("Password is not according to rules!");
             et_password.requestFocus();
             return;
-        }
+        }*/
 
         if(!str_password.equals(str_confirm_password)){
             et_confirm_password.setError("Passwords are not matching!");
@@ -91,7 +91,7 @@ public class SignUp extends AppCompatActivity {
         }
 
         if(Integer.valueOf(str_age)<=0||Integer.valueOf(str_age)>=100){
-            et_age.setError("Age not set correctly!");
+            et_age.setError("Invalid age!");
             et_age.requestFocus();
             return;
         }
@@ -110,7 +110,7 @@ public class SignUp extends AppCompatActivity {
                                     if(task.isSuccessful()){
                                         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
                                         user.sendEmailVerification();
-                                        Toast.makeText(getApplicationContext(),"Verify mail using mail sent to your mail!",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),"Verify yourself using the link sent to your mail!",Toast.LENGTH_LONG).show();
                                         Toast.makeText(getApplicationContext(),"Sign-up successful",Toast.LENGTH_LONG).show();
                                         navigate_to_login();
 
@@ -122,7 +122,7 @@ public class SignUp extends AppCompatActivity {
                             });
 
                         }else{
-                            Toast.makeText(getApplicationContext(),"failed to sign-up \nUser already exists!",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"failed to sign-up \nYou already have an account!\nPlease login using the mail-id!",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
